@@ -1,37 +1,41 @@
-## Welcome to GitHub Pages
+# Adsense-Anti-Bom-Click
+This code using javascript
+This script code will protect your site from people with malicious intentions against your Google Adsense ads by clicking repeatedly which causes revenue to decrease or get banned from Google Adsense.
 
-You can use the [editor on GitHub](https://github.com/westheme/Adsense-Anti-Bom-Click/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+---
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## How it work?
+1. The script will check whether the cookies script are looking is exists or not
+2. If exist, all ads will remove
+3. When visitor / guest click on ads, script will count and save in cookies
+4. After all conditions are met, all ads will remove as long as you defined it before
 
-### Markdown
+---
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## How to use
+1. Call the script after JQuery Library
 
-```markdown
-Syntax highlighted code block
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- another script link here -->
+<script src="antibom.js"></script>
+```
+    
+2. Put the code on footer or before closing tag </body>
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```javascript
+let antibom = new Antibom(2, 1); 
+// 2 is click count, how many clicks on ads before ads will hidden
+// 1 is mean 1 hour. You can change it as you wish. It define how long before the ads is showing again (starting from the last click)
+antibom.run();
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+3. Save
+---
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/westheme/Adsense-Anti-Bom-Click/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Thanks to
+1. Allah SWT
+2. Muhammad SAW
+3. Stackoverflow
+4. W3school
